@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Project from "../components/Project.astro";
+---
+
+<BaseLayout>
+	<div class="flex flex-col gap-4">
+		<h1 class="font-script text-[32px] font-bold">rew</h1>
+		<p class="text-accent">Software Engineer.</p>
+		<p>
+			5+ years of experience in full stack development, from firmware to
+			frontend. I enjoy making things that help people do what they want.
+		</p>
+		<p>
+			Working @ <a
+				href="https://avservices.net/"
+				target="_blank"
+				class="text-accent underline">A-V Services</a
+			>
+		</p>
+	</div>
+
+	<div class="flex flex-col gap-5">
+		<h2 class="font-bold italic">:: Now</h2>
+
+		<div class="flex flex-col gap-4">
+			<p>
+				Right now, I’m focused on building and creating. By day, I work
+				on firmware, CI/CD pipelines, and cloud infrastructure for
+				<a
+					href="https://avservices.net/harmony/"
+					target="_blank"
+					class="underline">hardware monitoring systems</a
+				>. By night, I’m working on <a
+					href="/"
+					class="text-accent underline">Corvine Club</a
+				> with a product called
+				<a href="/" class="text-accent underline">Pull Cards</a>. It’s
+				been exciting to take an idea and turn it into something real.<br
+				/><br />In my free time, I’m all about strategy and
+				creativity—whether it’s playing Magic: The Gathering, chess, or
+				games like League of Legends and Counter-Strike. I also enjoy
+				reading manga, 3D printing, and diving into tech projects like
+				refining my <a
+					href="https://github.com/tencorvids/crow"
+					target="_blank"
+					class="underline">NixOS</a
+				> and
+				<a
+					href="https://github.com/tencorvids/charon"
+					target="_blank"
+					class="underline">NeoVim</a
+				>
+				setup or writing TUI apps in Go.<br /><br />Right now, I’m just
+				enjoying the process of learning, creating, and growing.
+			</p>
+		</div>
+	</div>
+
+	<div class="flex flex-col gap-5">
+		<h2 class="font-bold italic">:: Projects</h2>
+
+		<div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+			<Project
+				name={"crow"}
+				description={"Nix btw."}
+				url={"https://github.com/tencorvids/crow"}
+			/>
+
+			<Project
+				name={"charon"}
+				description={"NeoVim btw."}
+				url={"https://github.com/tencorvids/charon"}
+			/>
+		</div>
+	</div>
+
+	<div class="flex flex-col gap-5">
+		<h2 class="font-bold italic">:: Contact</h2>
+
+		<div class="flex flex-col gap-4">
+			<a
+				href="mailto:rew@tencorvids.com"
+				target="_blank"
+				class="text-accent underline">rew@tencorvids.com</a
+			>
+		</div>
+	</div>
+</BaseLayout>
