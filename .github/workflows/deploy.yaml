@@ -23,6 +23,11 @@ jobs:
       - name: Build project
         run: deno task build
 
+      - name: Clear caches and dependencies
+        run: |
+          echo "Clearing previous build artifacts and caches..."
+          rm -rf .cache node_modules deno.lock
+
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
