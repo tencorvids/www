@@ -1,3 +1,5 @@
+name: Cloudflare Pages
+
 on:
   push:
     branches:
