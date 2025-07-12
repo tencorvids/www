@@ -1,17 +1,15 @@
 {
   pkgs ? import <nixpkgs> { },
 }:
-
 pkgs.mkShell {
   buildInputs = [
-    pkgs.deno
-    pkgs.tailwindcss-language-server
-    pkgs.astro-language-server
-    pkgs.wrangler
+    pkgs.flyctl
+    pkgs.nodejs_22
+    pkgs.pnpm_10
+    pkgs.nodePackages_latest."@tailwindcss/language-server"
+    pkgs.emmet-language-server
+    pkgs.typescript-language-server
+    pkgs.nodePackages_latest.prettier
+    pkgs.nodePackages_latest.vscode-langservers-extracted
   ];
-
-  shellHook = ''
-    echo "Welcome to the Deno development shell!"
-    echo "Deno version: $(deno --version)"
-  '';
 }
