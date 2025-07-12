@@ -3,7 +3,7 @@ import "@/style/global.css";
 import { Provider } from "@/provider/server";
 
 export const metadata: Metadata = {
-    title: "Ten Corvids",
+    title: "tencorvids",
     description: "rew's personal website.",
 };
 
