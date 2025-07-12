@@ -7,6 +7,7 @@ import { Button } from "@tencorvids/ui";
 import { TransitionPanel } from "$/transition-panel";
 import { cx } from "@tencorvids/util";
 import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, XLogoIcon } from "@phosphor-icons/react";
+import { ThemeToggle } from "~/ui/theme-toggle";
 
 export default function Page() {
     return (
@@ -33,30 +34,34 @@ export default function Page() {
             </GridSection>
 
             <GridSection>
-                <div className="w-full h-full flex items-center justify-end p-2">
-                    <Button asChild variant="ghost" size="icon">
-                        <a href="https://github.com/tencorvids" target="_blank">
-                            <GithubLogoIcon className="size-4 text-muted-foreground" />
-                        </a>
-                    </Button>
+                <div className="w-full h-full flex items-center justify-between p-2">
+                    <div>
+                        <Button asChild variant="ghost" size="icon">
+                            <a href="https://github.com/tencorvids" target="_blank">
+                                <GithubLogoIcon className="size-4 text-muted-foreground" />
+                            </a>
+                        </Button>
 
-                    <Button asChild variant="ghost" size="icon">
-                        <a href="https://x.com/tencorvids" target="_blank">
-                            <XLogoIcon className="size-4 text-muted-foreground" />
-                        </a>
-                    </Button>
+                        <Button asChild variant="ghost" size="icon">
+                            <a href="https://x.com/tencorvids" target="_blank">
+                                <XLogoIcon className="size-4 text-muted-foreground" />
+                            </a>
+                        </Button>
 
-                    <Button asChild variant="ghost" size="icon">
-                        <a href="https://www.linkedin.com/in/andrewvota/" target="_blank">
-                            <LinkedinLogoIcon className="size-4 text-muted-foreground" />
-                        </a>
-                    </Button>
+                        <Button asChild variant="ghost" size="icon">
+                            <a href="https://www.linkedin.com/in/andrewvota/" target="_blank">
+                                <LinkedinLogoIcon className="size-4 text-muted-foreground" />
+                            </a>
+                        </Button>
 
-                    <Button asChild variant="ghost" size="icon">
-                        <a href="mailto:rew@tencorvids.com" target="_blank">
-                            <PaperPlaneTiltIcon className="size-4 text-muted-foreground" />
-                        </a>
-                    </Button>
+                        <Button asChild variant="ghost" size="icon">
+                            <a href="mailto:rew@tencorvids.com" target="_blank">
+                                <PaperPlaneTiltIcon className="size-4 text-muted-foreground" />
+                            </a>
+                        </Button>
+                    </div>
+
+                    <ThemeToggle />
                 </div>
             </GridSection>
         </main>
