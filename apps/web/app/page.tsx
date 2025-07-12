@@ -6,7 +6,7 @@ import Waves from "$/waves";
 import { Button } from "@tencorvids/ui";
 import { TransitionPanel } from "$/transition-panel";
 import { cx } from "@tencorvids/util";
-import { GithubLogoIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, XLogoIcon } from "@phosphor-icons/react";
 
 export default function Page() {
     return (
@@ -23,7 +23,7 @@ export default function Page() {
 
             <GridSection outerClassName="h-32" className="p-4">
                 <div className="w-full h-full relative overflow-hidden">
-                    <Waves lineColor="#fff" />
+                    <Waves lineColor="primary" />
                 </div>
             </GridSection>
 
@@ -32,7 +32,33 @@ export default function Page() {
                 <Panels />
             </GridSection>
 
-            <GridSection />
+            <GridSection>
+                <div className="w-full h-full flex items-center justify-end p-2">
+                    <Button asChild variant="ghost" size="icon">
+                        <a href="">
+                            <GithubLogoIcon className="size-4 text-muted-foreground" />
+                        </a>
+                    </Button>
+
+                    <Button asChild variant="ghost" size="icon">
+                        <a href="">
+                            <XLogoIcon className="size-4 text-muted-foreground" />
+                        </a>
+                    </Button>
+
+                    <Button asChild variant="ghost" size="icon">
+                        <a href="">
+                            <LinkedinLogoIcon className="size-4 text-muted-foreground" />
+                        </a>
+                    </Button>
+
+                    <Button asChild variant="ghost" size="icon">
+                        <a href="">
+                            <PaperPlaneTiltIcon className="size-4 text-muted-foreground" />
+                        </a>
+                    </Button>
+                </div>
+            </GridSection>
         </main>
     );
 }
@@ -136,7 +162,7 @@ function Row({ href, title, description }: RowProps) {
     return (
         <a href={href} target="_blank" className="w-full flex justify-between items-center gap-2 p-2 rounded hover:bg-accent">
             <div className="flex gap-2">
-                <p>{title}</p>
+                <p className="min-w-[50px] text-nowrap">{title}</p>
                 <p className="text-muted-foreground">{description}</p>
             </div>
             <GithubLogoIcon className="size-4 min-w-4 text-muted-foreground" />
