@@ -3,7 +3,6 @@
 }:
 pkgs.mkShell {
   buildInputs = [
-    pkgs.flyctl
     pkgs.nodejs_22
     pkgs.pnpm_10
     pkgs.nodePackages_latest."@tailwindcss/language-server"
