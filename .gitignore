@@ -1,8 +1,13 @@
-dist/
-.astro/
+# Dependencies
 node_modules/
+
+# Local env files
 .env
+.env.production
+.env.local
+
+# Misc
 .DS_Store
-.idea/
+*.pem
 .vscode/
-.direnv/
+.idea/
