@@ -35,25 +35,25 @@ export default function Page() {
             <GridSection>
                 <div className="w-full h-full flex items-center justify-end p-2">
                     <Button asChild variant="ghost" size="icon">
-                        <a href="">
+                        <a href="https://github.com/tencorvids" target="_blank">
                             <GithubLogoIcon className="size-4 text-muted-foreground" />
                         </a>
                     </Button>
 
                     <Button asChild variant="ghost" size="icon">
-                        <a href="">
+                        <a href="https://x.com/tencorvids" target="_blank">
                             <XLogoIcon className="size-4 text-muted-foreground" />
                         </a>
                     </Button>
 
                     <Button asChild variant="ghost" size="icon">
-                        <a href="">
+                        <a href="https://www.linkedin.com/in/andrewvota/" target="_blank">
                             <LinkedinLogoIcon className="size-4 text-muted-foreground" />
                         </a>
                     </Button>
 
                     <Button asChild variant="ghost" size="icon">
-                        <a href="">
+                        <a href="mailto:rew@tencorvids.com" target="_blank">
                             <PaperPlaneTiltIcon className="size-4 text-muted-foreground" />
                         </a>
                     </Button>
