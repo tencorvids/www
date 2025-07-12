@@ -170,7 +170,7 @@ function Row({ href, title, description }: RowProps) {
     return (
         <a href={href} target="_blank" className="w-full flex justify-between items-center gap-2 p-2 rounded hover:bg-accent">
             <div className="flex items-center gap-2">
-                <p className="min-w-[50px] text-nowrap">{title}</p>
+                <p className="min-w-[50px] font-medium text-nowrap">{title}</p>
                 <p className="text-muted-foreground pr-2">{description}</p>
             </div>
             <GithubLogoIcon className="size-4 min-w-4 text-muted-foreground" />
