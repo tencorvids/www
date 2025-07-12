@@ -1,28 +1,44 @@
 "use client";
 
 import { MoonIcon, SunIcon } from "@phosphor-icons/react";
-import { Toggle } from "@tencorvids/ui";
+import { Button } from "@tencorvids/ui";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-    const { theme, setTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
+    const [isMounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const isDark = isMounted ? resolvedTheme === "dark" : false;
 
     return (
-        <Toggle
-            className="group hover:bg-accent hover:text-primary"
-            pressed={theme === "dark"}
-            onPressedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-        >
-            <MoonIcon
-                className="size-4 shrink-0 scale-0 opacity-0 transition-all group-data-[state=on]:scale-100 group-data-[state=on]:opacity-100"
-                aria-hidden="true"
-            />
-            <SunIcon
-                className="size-4 absolute shrink-0 scale-100 opacity-100 transition-all group-data-[state=on]:scale-0 group-data-[state=on]:opacity-0"
-                aria-hidden="true"
-            />
-        </Toggle>
+        isMounted && (
+            <Button
+                variant="ghost"
+                size="icon"
+                className="animate-in fade-in duration-300"
+                onClick={() => setTheme(isDark ? "light" : "dark")}
+                aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+            >
+                <MoonIcon
+                    className={`size-4 shrink-0 transition-all ${isDark
+                        ? "scale-100 opacity-100"
+                        : "scale-0 opacity-0 absolute"
+                        }`}
+                    aria-hidden="true"
+                />
+                <SunIcon
+                    className={`size-4 shrink-0 transition-all ${isDark
+                        ? "scale-0 opacity-0 absolute"
+                        : "scale-100 opacity-100"
+                        }`}
+                    aria-hidden="true"
+                />
+            </Button>
+        )
     );
 }
-
