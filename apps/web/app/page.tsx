@@ -127,7 +127,7 @@ function ProjectsPanel() {
         },
         {
             title: "rui3-go",
-            description: "Go interface for RAK chips, generally used for LoRa communications on the RUI3-based boards.",
+            description: "Go interface for RAK chips, generally used for LoRa communications on RUI3-based boards.",
             href: "https://github.com/tencorvids/rui3-go",
         },
         {
