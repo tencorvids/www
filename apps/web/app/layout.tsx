@@ -5,6 +5,9 @@ import { Provider } from "@/provider/server";
 export const metadata: Metadata = {
     title: "tencorvids",
     description: "rew's personal website.",
+    icons: {
+        icon: "/favicon.svg"
+    },
 };
 
 export default function RootLayout({
@@ -13,8 +16,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="h-full" suppressHydrationWarning>
-            <body className="max-w-screen h-full">
+        <html lang="en" suppressHydrationWarning>
+            <body className="max-w-screen min-h-svh">
                 <Provider>
                     {children}
                 </Provider>

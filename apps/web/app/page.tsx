@@ -14,10 +14,10 @@ export default function Page() {
     const { theme } = useTheme();
 
     return (
-        <main className="w-full h-full flex flex-col">
+        <main className="w-full min-h-svh flex flex-col">
             <GridSection />
 
-            <GridSection className="p-4">
+            <GridSection className="p-2 md:p-4">
                 <h2 className="text-xs text-muted-foreground font-mono">tencorvids</h2>
                 <h1 className="mt-1">And<span className="text-brand font-medium">[rew]</span> Vota</h1>
                 <h3 className="mt-1 text-muted-foreground">Software Engineer</h3>
@@ -25,14 +25,14 @@ export default function Page() {
                 <p className="mt-4 max-w-[80ch]">I'm a Software Engineer building everything from firmware to frontend. Currently, I work on <a href="https://avservices.net/harmony/" target="_blank" className="underline hover:text-muted-foreground">hardware monitoring systems @ A-V Services</a> <span className="text-muted-foreground italic">(serendipitous name, not my business)</span>, writing firmware and developing internal tools for deployment and management.</p>
             </GridSection>
 
-            <GridSection outerClassName="h-32" className="p-4">
+            <GridSection outerClassName="h-32" className="p-2 md:p-4">
                 <div className="w-full h-full relative overflow-hidden">
                     <Waves lineColor={theme === "dark" ? "#fff" : "#000"} />
                 </div>
             </GridSection>
 
 
-            <GridSection outerClassName="flex-1" className="p-4">
+            <GridSection outerClassName="flex-1" className="p-2 md:p-4">
                 <Panels />
             </GridSection>
 
@@ -103,7 +103,7 @@ function Panels() {
                 }}
             >
                 {items.map((item, index) => (
-                    <div key={index} className="p-4">
+                    <div key={index} className="p-2 lg:p-4">
                         {item.panel}
                     </div>
                 ))}
@@ -169,7 +169,7 @@ interface RowProps {
 function Row({ href, title, description }: RowProps) {
     return (
         <a href={href} target="_blank" className="w-full flex justify-between items-center gap-2 p-2 rounded hover:bg-accent">
-            <div className="flex gap-2">
+            <div className="flex items-center gap-2">
                 <p className="min-w-[50px] text-nowrap">{title}</p>
                 <p className="text-muted-foreground">{description}</p>
             </div>
