@@ -37,4 +37,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           command: pages deploy apps/web/out/ --project-name=www
           environment: "production"
-          package-manager: pnpm
+          packageManager: pnpm
