@@ -161,6 +161,7 @@
   --color-pink-10: var(--pink-10);
   --color-background-01: var(--background-01);
   --color-background-02: var(--background-02);
+  --color-brand: oklch(0.6696 0.222 37.42)
 }
 
 @layer base {
