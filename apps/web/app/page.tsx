@@ -1,15 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, XLogoIcon } from "@phosphor-icons/react";
+import { cx } from "@tencorvids/util";
+import { Button } from "@tencorvids/ui";
 import { GridSection } from "$/grid-section";
 import Waves from "$/waves";
-import { Button } from "@tencorvids/ui";
 import { TransitionPanel } from "$/transition-panel";
-import { cx } from "@tencorvids/util";
-import { GithubLogoIcon, LinkedinLogoIcon, PaperPlaneTiltIcon, XLogoIcon } from "@phosphor-icons/react";
-import { ThemeToggle } from "~/ui/theme-toggle";
+import { ThemeToggle } from "$/theme-toggle";
+import { useTheme } from "next-themes";
 
 export default function Page() {
+    const { theme } = useTheme();
+
     return (
         <main className="w-full h-full flex flex-col">
             <GridSection />
@@ -19,12 +22,12 @@ export default function Page() {
                 <h1 className="mt-1">And<span className="text-brand font-medium">[rew]</span> Vota</h1>
                 <h3 className="mt-1 text-muted-foreground">Software Engineer</h3>
 
-                <p className="mt-4 max-w-[80ch]">I'm a Software Engineer building everything from firmware to frontend. Currently, I work on <a href="https://avservices.net/harmony/" target="_blank" className="underline">hardware monitoring systems @ A-V Services</a> <span className="text-muted-foreground italic">(serendipitous name, not my business)</span>, writing firmware and developing internal tools for deployment and management.</p>
+                <p className="mt-4 max-w-[80ch]">I'm a Software Engineer building everything from firmware to frontend. Currently, I work on <a href="https://avservices.net/harmony/" target="_blank" className="underline hover:text-muted-foreground">hardware monitoring systems @ A-V Services</a> <span className="text-muted-foreground italic">(serendipitous name, not my business)</span>, writing firmware and developing internal tools for deployment and management.</p>
             </GridSection>
 
             <GridSection outerClassName="h-32" className="p-4">
                 <div className="w-full h-full relative overflow-hidden">
-                    <Waves lineColor="primary" />
+                    <Waves lineColor={theme === "dark" ? "#fff" : "#000"} />
                 </div>
             </GridSection>
 
