@@ -52,6 +52,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@phosphor-icons/react':
+        specifier: 'catalog:'
+        version: 2.1.10(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tencorvids/ui':
         specifier: workspace:*
         version: link:../../packages/ui

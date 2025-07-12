@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@phosphor-icons/react": "catalog:",
     "@tencorvids/ui": "workspace:*",
     "@tencorvids/util": "workspace:*",
     "dotenv": "catalog:",
